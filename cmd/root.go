@@ -61,6 +61,28 @@ var rootCmd = &cobra.Command{
 				panic(err)
 			}
 
+			// Docker tag image
+			cmd = execute.ExecTask{
+				Command:     "docker",
+				Args:        []string{"tag", image, localImage},
+				StreamStdio: true,
+			}
+			_, err = cmd.Execute()
+			if err != nil {
+				panic(err)
+			}
+
+			// Docker  image pushed to local registry
+			cmd = execute.ExecTask{
+				Command:     "docker",
+				Args:        []string{"push", localImage},
+				StreamStdio: true,
+			}
+			_, err = cmd.Execute()
+			if err != nil {
+				panic(err)
+			}
+
 		}
 	},
 }
