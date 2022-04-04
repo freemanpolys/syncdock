@@ -44,7 +44,7 @@ var fetchCmd = &cobra.Command{
 			if taggedImage == "" {
 				taggedImage = imageFromLocal
 			}
-			fmt.Fprintln(os.Stderr, "Image '", imageFromLocal, "' will be tagged to '", taggedImage, "'")
+			fmt.Fprintln(os.Stderr, "Image '", localImage, "' will be tagged to '", taggedImage, "'")
 
 			// Docker pull local image
 			cmd := execute.ExecTask{
