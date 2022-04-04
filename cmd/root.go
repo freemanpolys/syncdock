@@ -35,7 +35,8 @@ var rootCmd = &cobra.Command{
 	Use:   "syncdock",
 	Short: "Push docker image to custom registry",
 	Long: `
-	This cli pull an image from docker and push it to a local docker registry
+	This cli pull an image docker from some registry and push it to a local docker registry.
+	One use case it to handle easily docker images in airgaped environment.
 	`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
