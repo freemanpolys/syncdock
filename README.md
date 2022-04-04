@@ -26,7 +26,8 @@ syncdock  -i nginx
 # Pull the docker image with full url is usefull for non dockerhub repo
 syncdock  -f docker.elastic.co/eck/eck-operator:2.1.0  -i eck/eck-operator:2.1.0
 
-
+# Fetch image from local repo and tag it to another image
+syncdock  fetch -i nginx -t nama/nginx
 ```
 
 ## Contributing
