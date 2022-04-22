@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "syncdock/cmd"
+import "github.com/freemanpolys/syncdock/cmd"
 
 func main() {
 	cmd.Execute()

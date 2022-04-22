@@ -1,4 +1,4 @@
-module syncdock
+module github.com/freemanpolys/syncdock
 
 go 1.17
 
